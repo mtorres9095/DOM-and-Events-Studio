@@ -17,18 +17,34 @@ window.addEventListener("load", function(){
     console.log("window loaded complete");
 });
 function init(){
-    takeOffButton = document.getElementById("Take off");
+    takeOffButton = document.getElementById("takeoff");
     landingButton = document.getElementById("landing");
     missionAbortButton = document.getElementById("missionAbort");
     currentFligthStatus = document.getElementById("flightStatus");
     shuttleFlightScreen = document.getElementById("shuttleBackground");
     shuttleHeight = document.getElementById("spaceShuttleHeight");
+    // upArrow = document.getElementById("")
 
     takeOffButton.addEventListener("click", function(){
         window.confirm("Confirm that the shuttle is ready for takeoff.");
+        console.log(takeOffButton);
            currentFligthStatus.innerHTML = "Shuttle in flight."; 
            shuttleFlightScreen.style.background = "blue";
            shuttleHeight.innerHTML = "10,000";
     });
+    landingButton.addEventListener("click", function(){
+        window.alert("The shuttle is landing. Landing gear engaged.");
+        currentFligthStatus.innerHTML = "The shuttle has landed.";
+        shuttleFlightScreen.style.background = "green";
+        shuttleHeight.innerHTML = "0";
+    });
+    missionAbortButton.addEventListener("click", function(){
+        window.alert("Confirm that you want to abort the mission.");
+        currentFligthStatus.innerHTML = "Mission aborted.";
+        shuttleFlightScreen.style.background = "green";
+        shuttleHeight.innerHTML = "0";
+    });
+
+
 
 }
