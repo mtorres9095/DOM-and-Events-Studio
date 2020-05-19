@@ -13,10 +13,13 @@ let shuttleFlightScreen = null;
 let shuttleHeight = null;
 
 
-window.addEventListener("load", function(){
-    console.log("window loaded complete");
-});
+
 function init(){
+
+    // Load initiated
+    window.addEventListener("load", function(){
+        console.log("window loaded complete");
+    });
     takeOffButton = document.getElementById("takeoff");
     landingButton = document.getElementById("landing");
     missionAbortButton = document.getElementById("missionAbort");
@@ -26,6 +29,7 @@ function init(){
     // upArrow = document.getElementById("")
 
     takeOffButton.addEventListener("click", function(){
+        window.alert("just clicked take off");
         window.confirm("Confirm that the shuttle is ready for takeoff.");
         console.log(takeOffButton);
            currentFligthStatus.innerHTML = "Shuttle in flight."; 
@@ -45,6 +49,6 @@ function init(){
         shuttleHeight.innerHTML = "0";
     });
 
+};
 
-
-}
+window.onload = init;
