@@ -26,7 +26,10 @@ function init(){
     currentFligthStatus = document.getElementById("flightStatus");
     shuttleFlightScreen = document.getElementById("shuttleBackground");
     shuttleHeight = document.getElementById("spaceShuttleHeight");
-    upArrow = document.getElementById("Up");
+    upArrow = document.getElementById("uparrow");
+    downArrow = document.getElementById("downarrow");
+    leftArrow = document.getElementById("leftarrow");
+    rightArrow = document.getElementById("rightarrow");
 
     takeOffButton.addEventListener("click", function(){
         window.alert("just clicked take off");
