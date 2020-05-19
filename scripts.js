@@ -10,7 +10,7 @@ let leftArrow = null;
 let paragraph = null; 
 let currentFligthStatus = null;
 let shuttleFlightScreen = null;
-let shuttleHeight = null;
+let shuttleHeight = 0;
 
 
 
@@ -37,13 +37,13 @@ function init(){
         console.log(takeOffButton);
            currentFligthStatus.innerHTML = "Shuttle in flight."; 
            shuttleFlightScreen.style.background = "blue";
-           shuttleHeight.innerHTML = "10,000";
+           shuttleHeight.innerHTML = this.innerHTML + 10000;
     });
     landingButton.addEventListener("click", function(){
         window.alert("The shuttle is landing. Landing gear engaged.");
         currentFligthStatus.innerHTML = "The shuttle has landed.";
         shuttleFlightScreen.style.background = "green";
-        shuttleHeight.innerHTML = "0";
+        shuttleHeight.innerHTML = 0;
     });
     missionAbortButton.addEventListener("click", function(){
         window.alert("Confirm that you want to abort the mission.");
@@ -52,9 +52,24 @@ function init(){
         shuttleHeight.innerHTML = "0";
     });
     upArrow.addEventListener("click",function(){
-        window.alert("Confirm that you want to abort the mission."); 
+        window.alert("Confirm that you touch the up arrow"); 
+        shuttleHeight.innerHTML = this.innerHTML + 10000;
 
     });
+    downArrow.addEventListener("click",function(){
+        window.alert("Confirm that you touch the up arrow"); 
+        shuttleHeight.innerHTML = this.innerHTML - 10000;
+
+    });
+    leftArrow.addEventListener("click",function(){
+        window.alert("Confirm that you touch the up arrow"); 
+
+    });
+    rightArrow.addEventListener("click",function(){
+        window.alert("Confirm that you touch the up arrow"); 
+
+    });
+    
 
 };
 
