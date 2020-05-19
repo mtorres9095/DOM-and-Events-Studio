@@ -26,7 +26,7 @@ function init(){
     currentFligthStatus = document.getElementById("flightStatus");
     shuttleFlightScreen = document.getElementById("shuttleBackground");
     shuttleHeight = document.getElementById("spaceShuttleHeight");
-    // upArrow = document.getElementById("")
+    upArrow = document.getElementById("Up");
 
     takeOffButton.addEventListener("click", function(){
         window.alert("just clicked take off");
@@ -47,6 +47,10 @@ function init(){
         currentFligthStatus.innerHTML = "Mission aborted.";
         shuttleFlightScreen.style.background = "green";
         shuttleHeight.innerHTML = "0";
+    });
+    upArrow.addEventListener("click",function(){
+        window.alert("Confirm that you want to abort the mission."); 
+
     });
 
 };
