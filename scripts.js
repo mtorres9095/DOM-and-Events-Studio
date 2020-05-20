@@ -15,8 +15,6 @@ let rocket = null;
 
 
 
-
-
 function init(){
 
     // Load initiated
@@ -38,7 +36,6 @@ function init(){
     rocketModel.style.left =  "0px";
     rocketModel.style.bottom =  "0px";
    
-
     // Takeoff Button function
     takeOffButton.addEventListener("click", function(){
         window.alert("just clicked take off");
@@ -71,7 +68,6 @@ function init(){
         // rocketModel.style.up = 10;
         shuttleHeight.innerHTML = parseInt(shuttleHeight.innerHTML) + 10000;
         // rocket. = 10px
-
     });
     downArrow.addEventListener("click",function(){
         //  window.alert("Confirm that you touch the up arrow"); 
